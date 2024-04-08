@@ -1,0 +1,22 @@
+@import "reset";
+@import "variables/main-theme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+  font-family: Helvetica, serif;
+}
+
+:root {
+  @extend .main-theme //пока что не подразумевается несколько вариантов цветов, поэтому просто экстендим
+}
+
+.app {
+
+}
+

@@ -1,0 +1,35 @@
+.AddCalendarTaskModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+
+
+  .ant-picker-range {
+    background-color: var(--main-300);
+    color: var(--main-700);
+    border: 1px solid var(--main-100);
+
+    input::placeholder {
+      color: var(--main-100);
+    }
+
+    .ant-picker-suffix,
+    .ant-picker-clear {
+      path {
+        fill: var(--main-100);
+      }
+    }
+  }
+
+  &_selectors {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,114 @@
+.TasksCalendar {
+  background-color: var(--main-400);
+  max-height: 93vh;
+
+  .rbc {
+    /*Общие стили для календаря*/
+    &-header { //стиль шапок всех дат
+      margin-right: 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--main-700);
+      background-color: var(--main-400);
+      min-height: 36px;
+      border-color: var(--main-100) !important;
+    }
+
+    &-allday-cell { //на сколько понял, это события на целый день
+      border-top: 1px solid var(--main-100);
+      margin-top: 12px;
+    }
+
+    &-time-header-cell .rbc-today { //шапка даты активного дня
+      color: var(--main-700);
+      background-color: var(--green-100);
+    }
+
+    &-time-slot { //любая ечейка под событие
+      color: var(--main-700);
+      background-color: var(--main-400);
+      z-index: 10;
+      border: none !important; //убирает полоски
+    }
+
+    &-time-slot:not(.rbc-today, .rbc-time-slot) {
+      background-color: var(--main-300);
+    }
+
+    &-day-bg { //ячейка под слот в месяце
+      color: var(--main-700);
+      background-color: var(--main-400);
+      border-left: 1px solid var(--main-100) !important;
+    }
+
+    &-off-range-bg {
+      background-color: var(--mian-200);
+    }
+
+    &-date-cell { //дата у ячейки в месяце
+      color: var(--main-700)
+    }
+
+    &-off-range {
+      color: var(--main-600);
+    }
+
+    /*Стили по сетке*/
+    .rbc-month-view,
+    .rbc-time-view {
+      border: 1px solid var(--main-100) !important;
+    }
+
+    &-time-content {
+      border: 1px solid var(--main-100) !important;
+    }
+
+    &-timeslot-group { //цвет сетки для недели
+      border-color: var(--main-100) !important;
+    }
+
+    &-month-row,
+    &-time-column { //цвет сетки для недели
+      border-color: var(--main-100) !important;
+    }
+
+    /*Стили событий*/
+    &-event,
+    &-background-event { //само событие и его задний фон
+      z-index: 100;
+      padding: 0;
+      border: none !important;
+    }
+
+    &-event-label { //заголовок с датой для события
+      display: none;
+    }
+
+    &-events-container { //контейнер для событий
+      width: 100%;
+    }
+  }
+
+  /*Убираем все пространство справа, чтоб не было видно скролл*/
+  .rbc-overflowing {
+    margin-right: 0 !important;
+  }
+
+  .rbc-time-content {
+    scrollbar-width: none; /* hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* hide the scrollbar in Edge and IE */
+
+    &::-webkit-scrollbar {
+      width: 0.5rem; /* set the width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--main-500); /* set the color of the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--main-700); /* set the color of the thumb */
+    }
+  }
+}

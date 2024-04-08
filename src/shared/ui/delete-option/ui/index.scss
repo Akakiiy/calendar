@@ -1,0 +1,44 @@
+.ant-popover {
+  &-inner {
+    border: 1px solid var(--main-100);
+    background-color: var(--main-500) !important;
+  }
+
+  &-arrow {
+    &:before {
+      background-color: var(--mian-200) !important;
+    }
+
+    &:after {
+      background-color: var(--mian-200) !important;
+    }
+  }
+
+  .ant-btn {
+    border: 1px solid var(--main-100);
+    color: #929292;
+    background-color: #565656;
+    transition: background-color, color .3s;
+
+    &:hover {
+      color: #ffffff !important; //в некоторых файлах почему то перебиваются стили
+      border: 1px solid var(--main-100) !important; //и тут тоже
+      background-color: var(--main-100) !important; //и тут тоже
+    }
+  }
+}
+
+.ant-popconfirm {
+  &-title {
+    color: #929292 !important;
+  }
+
+  &-description {
+    margin-top: 0 !important;
+    color: #929292 !important;
+  }
+
+  &-message {
+    align-items: center !important;
+  }
+}

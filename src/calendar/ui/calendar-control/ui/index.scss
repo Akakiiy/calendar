@@ -1,0 +1,67 @@
+.CalendarControl {
+  height: calc(7vh - 2px);
+  padding: 0 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  background-color: var(--main-600);
+
+  &_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &_value {
+      width: 250px;
+      min-width: 250px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--main-700);
+      background-color: var(--main-300);
+      border-radius: 8px;
+    }
+  }
+
+  .ant-picker-outlined {
+    background-color: var(--main-300);
+    color: #FFFFFF;
+    border: 1px solid var(--main-100);
+
+    input::placeholder {
+      color: var(--main-100);
+    }
+
+    .ant-picker-suffix,
+    .ant-picker-clear {
+      path {
+        fill: var(--main-100);
+      }
+    }
+  }
+
+  &_radio {
+    .ant-radio-button-wrapper {
+      &:hover {
+        color: var(--green-200) !important;
+      }
+    }
+
+    .ant-radio-button-wrapper-checked {
+      color: var(--green-200) !important;
+      border-color: var(--green-200) !important;
+      background-color: var(--main-100) !important;
+
+      &::before {
+        background-color: var(--green-200) !important;
+      }
+
+      &:hover {
+        color: var(--green-200) !important;
+      }
+    }
+  }
+}
